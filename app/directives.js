@@ -40,8 +40,6 @@
                   const wrongExist = scope.wrongmailid.includes(mail);
                   if (!exist && !wrongExist && mail) {
                     const check = mail.match(mailpattern);
-                    console.log(mail);
-
                     if (check != null) {
                       scope.mailid.push(mail);
                     } else {
@@ -55,8 +53,6 @@
               const wrongExist = scope.wrongmailid.includes(mail);
               if (!exist && !wrongExist && mail) {
                 const check = mail.match(mailpattern);
-                console.log(",");
-
                 if (check != null) {
                   scope.mailid.push(mail);
                 } else {
@@ -203,8 +199,6 @@
           '</div>',
         link: function (scope, element, attrs) {
           scope.bccEdit = _.has(attrs.$attr, "edit");
-
-          console.log(scope.bccEdit);
           scope.add = function (mail) {
             if (mail) {
               if (!_.isArray(scope.bccmails)) scope.bccmails = [];
@@ -262,24 +256,7 @@
       };
     },
   ]);
-  mailApp.directive("fileModel", [
-    "$parse",
-    function ($parse) {
-      return {
-        restrict: "A",
-        link: function (scope, element, attrs) {
-          var model = $parse(attrs.fileModel);
-          var modelSetter = model.assign;
 
-          element.bind("change", function () {
-            scope.$apply(function () {
-              modelSetter(scope, element[0].files[0]);
-            });
-          });
-        },
-      };
-    },
-  ]);
   mailApp.directive("ngFileModel", [
     "$parse",
     function ($parse) {

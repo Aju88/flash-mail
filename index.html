@@ -16,7 +16,6 @@
     <script src="app\controllers.js"></script>
     <script src="app\directives.js"></script>
     <script defer src="app\lib\all.js"></script>
-    <script src="app\services.js"></script>
   </head>
   <body>
     <p class="title">ZeeMail</p>
@@ -24,20 +23,16 @@
       <header>Compose</header>
       <div class="top-container" ng-controller="mainController">
         <!-- recipient field -->
-
         <div class="recipient text-item textcolor">
           <div class="to-mail-ids">
             <div class="to-recipient">
-              <!-- <email-tags inputs="{{email}}" emailList="emailList" show="show" ng-show="true"></email-tags> -->
               <div email-tags="" type="text" ng-model="emailid" edit=""></div>
             </div>
-
             <div class="cc-bcc">
               <a ng-if="showccbtn" ng-click="ccFunction()">Cc</a>
               <a ng-if="showbccbtn" ng-click="bccFunction()">Bcc</a>
             </div>
           </div>
-
           <div
             cc-tags=""
             ng-if="showCc"
@@ -55,7 +50,6 @@
         </div>
 
         <!-- the subject field -->
-
         <div class="subject">
           <input type="text" placeholder="Subject" />
         </div>
@@ -68,13 +62,15 @@
       <div ng-controller="attachController">
         <div class="files-container">
           <div ng-repeat="file in files" class="uploaded-files">
-            <div class="upload-files"><h5>{{file.name}}</h5></div>
+            <div class="upload-files">
+              <h5>{{file.name}}</h5>
+              <a ng-click="removeAttach(file)">x</a>
+            </div>
           </div>
         </div>
 
         <footer>
           <input id="fileupload" type="file" ng-file-model="files" multiple />
-
           <button class="not-btn" ng-click="click()">
             <i class="clip fas fa-paperclip"></i>
           </button>
@@ -92,13 +88,7 @@
         theme: "snow",
       });
     </script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="/__/firebase/8.6.5/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-    <!-- Initialize Firebase -->
     <script src="/__/firebase/init.js"></script>
   </body>
 </html>

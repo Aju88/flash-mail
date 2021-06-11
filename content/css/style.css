@@ -12,7 +12,6 @@ body {
   font-weight: 400;
   font-size: 20px;
   text-rendering: optimizeLegibility;
-  /* overflow-x: hidden; */
 }
 body {
   display: flex;
@@ -33,7 +32,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 70%;
-  /* height: 100px; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
 }
 header {
@@ -72,12 +70,10 @@ header {
   text-decoration: none;
   padding-right: 5px;
   font-size: 14px;
-  /* color: rgb(135, 135, 135); */
 }
 .cc-bcc {
   display: flex;
   justify-content: space-between;
-  /* width: 15%; */
 }
 .text-item {
   border-bottom: 1px solid rgb(216, 216, 216);
@@ -88,7 +84,6 @@ header {
   padding: 5px;
   border: none;
   outline: none;
-  /* border-bottom: 0px solid rgb(216, 216, 216);  */
 }
 .mailid {
   display: flex;
@@ -102,14 +97,13 @@ header {
   height: 25px;
   width: auto;
   margin: 5px;
-  /* color: rgb(118, 118, 118);; */
   border-radius: 10%;
   padding: 7px;
   border: none;
   background-color: rgb(209, 209, 209);
   overflow: visible;
 }
-.wemail{
+.wemail {
   background-color: rgb(252, 115, 115);
 }
 .to-id {
@@ -122,32 +116,37 @@ header {
 .mail-text {
   font-size: 14px;
   color: rgb(61, 61, 61);
-  font-weight: 600; 
+  font-weight: 600;
 }
 .mail-remove {
   cursor: pointer;
   padding: 7px 0px 7px 10px;
 }
-.files-container{
+.files-container {
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
-
 }
-.uploaded-files{
+.uploaded-files {
   display: flex;
   justify-content: left;
   padding: 5px 5px;
   font-size: 15px;
-  /* background-color: aquamarine; */
   width: auto;
 }
-.upload-files{
+.upload-files {
+  display: flex;
+  align-items: center;
   color: #fff;
-width:auto;
-padding: 5px;
-border-radius: 5px;
-background-color: rgb(138, 138, 138);
+  width: auto;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(138, 138, 138);
+}
+.upload-files a {
+  cursor: pointer;
+  padding: 0 7px;
+  color: rgb(255, 227, 227);
 }
 footer {
   display: flex;
@@ -157,13 +156,12 @@ footer {
 
 .clip {
   padding-top: 2px;
-  /* cursor: pointer; */
   color: rgb(73, 73, 73);
   height: 20px;
 }
-#fileupload{
+#fileupload {
   opacity: 0;
-  width:20px
+  width: 20px;
 }
 button {
   overflow-y: visible;
@@ -177,12 +175,10 @@ button {
   cursor: pointer;
   background-color: rgb(141, 142, 148);
 }
-.not-btn{
+.not-btn {
   padding: 0%;
   background-color: rgb(255, 255, 255);
-  margin: 5px ;
+  margin: 5px;
   width: 15px;
 }
-input.ng-invalid.ng-touched{
-  color:red;
-}
+
