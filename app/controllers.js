@@ -2,9 +2,15 @@
   "use strict";
   var mailApp = angular.module("mailComposeApp");
 
+  function locationreload() { 
+  
+    // To reload the entire page from the server
+    location.reload();       
+    }
   mailApp.controller("mainController", [
     "$scope",
     function ($scope) {
+   
       $scope.showccbtn = true;
       $scope.showbccbtn = true;
       $scope.showCc = false;
@@ -21,9 +27,8 @@
   ]);
   mailApp.controller("attachController", [
     "$scope",
-    "$timeout",
     "fileUpload",
-    function ($scope, $timeout, fileUpload) {
+    function ($scope, fileUpload) {
       $scope.user = {};
       $scope.click = function () {
         setTimeout(function () {
@@ -31,10 +36,8 @@
         }, 0);
       };
       $scope.submit = function () {
-     
-        var uploadUrl = "/upload";
-        fileUpload.uploadFileToUrl($scope.user, uploadUrl);
-
+        alert("Mail sent")
+        locationreload();
         // console.log("file is ");
         // console.log($scope.myFile.name);
       };
